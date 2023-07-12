@@ -11,6 +11,11 @@ pipeline{
               bat 'gradlew test'
           }
       }
+      stage('Run'){
+          steps{
+              bat 'gradlew bootRun'
+          }
+      }
       stage('Deploy'){
           steps{
               echo 'deploy'
